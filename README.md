@@ -16,6 +16,7 @@ Solution Design
 2. Autoscaling to scale using cloudwatch metric
 3. Step-up function to scale on queue metric
 
+![sol-arch](images/sol-arch.png)
 
 Capture RabbitMQ queues and push to Clouwatch
 a. Created a Python script using boto3 SDK to query RabbitMQ and push it to Cloudwatch.
