@@ -12,11 +12,17 @@ Challenge is to scale Celery workers depending upon RabbitMQ Queue-size. There i
 
 
 ## Solution Design ##
-Markup : 1. Capture RabbitMQ queues and push to Clouwatch
+1. Capture RabbitMQ queues and push to Clouwatch
 2. Autoscaling to scale using cloudwatch metric
 3. Step-up function to scale on queue metric
 
 ![sol-arch](images/sol-arch.png)
 
 ### Capture RabbitMQ queues and push to Clouwatch ###
-Markup : a. Created a Python script using boto3 SDK to query RabbitMQ and push it to Cloudwatch.
+* Created a Python script using boto3 SDK to query RabbitMQ and push it to Cloudwatch.
+* Create Cron to execute this script in every 30 sec
+
+crontab -e
+```
+
+```
